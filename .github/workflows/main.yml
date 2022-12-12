@@ -21,4 +21,4 @@ jobs:
 
      #finally build your app with the latest command
       - name: Build and test with Maven
-        run: mvn -f gitdir/Devopstd/simple-api-student-main/pom.xml -B  verify   #TODO
+        run: mvn -f ../../simple-api-student-main/pom.xml -B  verify   #TODO
