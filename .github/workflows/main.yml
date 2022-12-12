@@ -21,4 +21,4 @@ jobs:
 
      #finally build your app with the latest command
       - name: Build and test with Maven
-        run: mvn clean verify   #TODO
+        run: mvn -f /home/runner/work/Devopstd/Devopstd/simple-api-student-main/ clean verify   #TODO
