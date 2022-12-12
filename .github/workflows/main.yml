@@ -48,7 +48,7 @@ jobs:
           # relative path to the place where source code with Dockerfile is locat
           context: ./simple-api-student-main
           # Note: tags has to be all lower-case
-          tags:  ${{secrets.DOCKERHUB_USERNAME}}/tp-devops/simple-api
+          tags:  ${{secrets.DOCKERHUB_USERNAME}}/tpdevops/simple-api
 
           push: ${{ github.ref == 'refs/heads/main' }}
 
@@ -60,7 +60,7 @@ jobs:
           # relative path to the place where source code with Dockerfile is located
           context: ./database
           # Note: tags has to be all lower-caseas
-          tags:  ${{secrets.DOCKERHUB_USERNAME}}/tp-devops/database
+          tags:  ${{secrets.DOCKERHUB_USERNAME}}/tpdevops/database
           
 
           push: ${{ github.ref == 'refs/heads/main' }}
@@ -72,6 +72,6 @@ jobs:
           # relative path to the place where source code with Dockerfile is located
           context: ./http-server
           # Note: tags has to be all lower-case
-          tags:  ${{secrets.DOCKERHUB_USERNAME}}/tp-devops/http-server
+          tags:  ${{secrets.DOCKERHUB_USERNAME}}/tpdevops/http-server
 
           push: ${{ github.ref == 'refs/heads/main' }}
