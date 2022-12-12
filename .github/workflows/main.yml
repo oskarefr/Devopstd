@@ -4,7 +4,6 @@ on:
   push:
     branches: main #TODO 
   pull_request:
-env:
 
 jobs:
   test-backend: 
