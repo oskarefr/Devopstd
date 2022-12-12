@@ -23,11 +23,11 @@ jobs:
       - name: Build and test with Maven
         run: mvn -f /home/runner/work/Devopstd/Devopstd/simple-api-student-main/ clean verify   #TODO
 
-
+        
       - name: Solar test
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn  -f /home/runner/work/Devopstd/Devopstd/ verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=oskarefr_Devopstd
+        run: mvn  -f /home/runner/work/Devopstd/Devopstd/simple-api-student-main/ verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=oskarefr_Devopstd
 
     # define job to build and publish docker image
   build-and-push-docker-image:
