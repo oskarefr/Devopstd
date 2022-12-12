@@ -22,6 +22,7 @@ jobs:
      #finally build your app with the latest command
       - name: Build and test with Maven
         run: mvn -f /home/runner/work/Devopstd/Devopstd/simple-api-student-main/ clean verify   #TODO
+      - name: Solar test
         run: mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=oskarefr_Devopstd
 
     # define job to build and publish docker image
