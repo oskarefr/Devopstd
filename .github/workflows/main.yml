@@ -50,6 +50,9 @@ jobs:
           # Note: tags has to be all lower-case
           tags:  ${{secrets.DOCKERHUB_USERNAME}}/tp-devops/simple-api
 
+          push: ${{ github.ref == 'refs/heads/main' }}
+
+
       - name: Build image and push database
           # DO the same for database
         uses: docker/build-push-action@v3
@@ -58,6 +61,9 @@ jobs:
           context: ./database
           # Note: tags has to be all lower-case
           tags:  ${{secrets.DOCKERHUB_USERNAME}}/tp-devops/database
+          
+
+          push: ${{ github.ref == 'refs/heads/main' }}
 
       - name: Build image and push httpd
         # DO the same for httpd
@@ -68,12 +74,4 @@ jobs:
           # Note: tags has to be all lower-case
           tags:  ${{secrets.DOCKERHUB_USERNAME}}/tp-devops/http-server
 
-      - name: Build image and push backend
-        uses: docker/build-push-action@v3
-        with:
-          # relative path to the place where source code with Dockerfile is located
-          context: ./simple-api
-          # Note: tags has to be all lower-case
-          tags:  ${{secrets.DOCKERHUB_USERNAME}}/tp-devops:simple-api
-          # build on feature branches, push only on main branch
-        push: ${{ github.ref == 'refs/heads/main' }}
+          push: ${{ github.ref == 'refs/heads/main' }}
