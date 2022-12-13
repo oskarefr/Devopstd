@@ -63,7 +63,7 @@ jobs:
           # DO the same for database
         uses: docker/build-push-action@v3
         with:
-          # relative path to the place where source code with Dockerfile is located
+          # relative path to the place where source code with Dockerfile is locatd
           context: ./database
           # Note: tags has to be all lower-caseas
           tags:  ${{secrets.DOCKERHUB_USERNAME}}/database
