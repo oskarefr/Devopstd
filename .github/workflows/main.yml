@@ -66,7 +66,7 @@ jobs:
           # relative path to the place where source code with Dockerfile is locatd
           context: ./database
           # Note: tags has to be all lower-caseas
-          tags:  ${{secrets.DOCKERHUB_USERNAME}}/database
+          tags:  ${{secrets.DOCKERHUB_USERNAME}}/mydatabase
           
 
           push: ${{ github.ref == 'refs/heads/main' }}
