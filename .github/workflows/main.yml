@@ -26,6 +26,7 @@ jobs:
         
       - name: Solar test
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn  -f /home/runner/work/Devopstd/Devopstd/simple-api-student-main/ verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=oskarefr_Devopstd
 
